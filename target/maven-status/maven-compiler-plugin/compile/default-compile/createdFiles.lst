@@ -1,0 +1,5 @@
+com\beapi\people\Controller.class
+com\beapi\people\APIService.class
+com\beapi\people\Person.class
+com\beapi\BeApiApplication.class
+com\beapi\people\PersonRepository.class

@@ -1,7 +1,6 @@
 
 !.mvn/wrapper/maven-wrapper.jar
-!.target/beAPI-0.0.1-SNAPSHOT.jar
-target/
+
 
 ### STS ###
 .apt_generated
