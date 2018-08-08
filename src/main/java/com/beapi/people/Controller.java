@@ -29,10 +29,10 @@ public class Controller {
 	}
 	
 	/*GET - By SSN*/
-	@RequestMapping("/people/{ssn}")
+	/*@RequestMapping("/people/{ssn}")
 	public List<Person> findBySSN(@PathVariable("ssn") String ssn){
 		return apiService.findBySSN(ssn);
-	}
+	}*/
 	
 	/*POST*/
 	@RequestMapping(method=RequestMethod.POST, value="/people")
@@ -40,11 +40,12 @@ public class Controller {
 		apiService.addPerson(person);
 	}
 	
+	
 	/*PUT - Lastname*/
-	@RequestMapping(method=RequestMethod.PUT, value="/people/{id}")
+	/*@RequestMapping(method=RequestMethod.PUT, value="/people/{id}")
 	public void updateLastname(@RequestBody @PathVariable("id") String id, String lastname) {
 		apiService.updateLastname(id,lastname);
-	}
+	}*/
 	
 	
 	/*DELETE - One By SSN*/
