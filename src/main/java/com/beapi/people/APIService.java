@@ -1,6 +1,7 @@
 package com.beapi.people;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,6 +13,25 @@ public class APIService {
 	
 	@Autowired
 	private PersonRepository peopleRepository;
+	
+	
+	public APIService() {
+		super();
+		this.fillDB();
+	}
+	
+	
+	
+	/*Hardcoded data (mockup)*/
+	public void fillDB() {
+		ArrayList<String> names=new ArrayList<>(Arrays.asList("Abel", "Saul", "Maria"));
+		ArrayList<String> lastnames= new ArrayList<>(Arrays.asList("Buenavista", "Cordoba", "Jimenez"));
+		ArrayList<String> birthdays= new ArrayList<>(Arrays.asList("11/08/80", "11/09/85", "02/12/90"));
+		ArrayList<String> ssns = new ArrayList<>(Arrays.asList("1234", "5678", "9101"));
+		for(int i=0; i<names.size();i++) {
+			this.addPerson(new Person(Integer.toString(i),names.get(i),lastnames.get(i),birthdays.get(i),ssns.get(i)));
+		}
+	}
 	
 	
 	/*Get Person by ID*/
