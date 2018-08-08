@@ -33,11 +33,20 @@ public class APIService {
 	
 	public void findByLastname() {}
 	
-	public void findBySSN() {}
+	/*Find by SSN*/
+	public List<Person> findBySSN(String ssn) {
+		return peopleRepository.findBySsn(ssn);		
+	}
 	
-	public void updateLastname() {}
+	/*Update by Lastname*/
+	public void updateLastname(Person person) {
+		peopleRepository.save(person);
+	}
 	
-	public void deleteBySSN() {}
+	/*Delete by SSN*/
+	public void deleteBySSN(String ssn) {
+		peopleRepository.deleteBySsn(ssn);
+	}
 	
 
 

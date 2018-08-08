@@ -7,17 +7,17 @@ import javax.persistence.Id;
 public class Person {
 	
 	@Id
-	private int id;
+	private String id;
 	private String name;
 	private String lastname;
-	private int ssn;
+	private String ssn;
 	private String birthday;
 	
 	public Person() {
 		
 	}
 	
-	public Person(int id, String name, String lastname, int ssn, String birthday) {
+	public Person(String id, String name, String lastname, String ssn, String birthday) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,13 +32,13 @@ public class Person {
 	/**
 	 * @return the id
 	 */
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	/**
@@ -68,13 +68,13 @@ public class Person {
 	/**
 	 * @return the ssn
 	 */
-	public int getSsn() {
+	public String getSsn() {
 		return ssn;
 	}
 	/**
 	 * @param ssn the ssn to set
 	 */
-	public void setSsn(int ssn) {
+	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
 	/**

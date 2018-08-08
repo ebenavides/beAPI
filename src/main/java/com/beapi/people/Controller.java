@@ -1,6 +1,9 @@
 package com.beapi.people;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,14 +17,20 @@ public class Controller {
 	
 	/*GET - All*/
 	@RequestMapping("/people")
-	public void getAllPeople(){
-		/* return apiService.getAllPeople();*/
+	public List<Person> getAllPeople(){
+		return apiService.getAllPeople();
 	}
 	
 	/*GET - One*/
 	@RequestMapping("/people/{id}")
-	public void getPerson() {
-		/*return apiService.getPerson(@PathVariable("id") String id);*/
+	public Person getPerson(@PathVariable("id") String id) {
+		return apiService.getPerson(id);
+	}
+	
+	/*GET - By SSN*/
+	@RequestMapping("/people/{ssn}")
+	public List<Person> findBySSN(@PathVariable("ssn") String ssn){
+		return apiService.findBySSN(ssn);
 	}
 	
 	/*PUT - Lastname*/
@@ -30,11 +39,11 @@ public class Controller {
 		/* apiService.updateLastname();*/
 	}
 	
-
+	
 	/*DELETE - One By SSN*/
 	@RequestMapping(method=RequestMethod.DELETE, value="/people/{ssn}")
-	public void deleteBySSN() {
-		/* apiService.deleteBySSN();*/
+	public void deleteBySSN(@PathVariable("ssn") String ssn) {
+		apiService.deleteBySSN(ssn);
 	}
 	
 	
