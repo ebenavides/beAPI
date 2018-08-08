@@ -38,6 +38,11 @@ public class APIService {
 		return peopleRepository.findBySsn(ssn);		
 	}
 	
+	/*Create Person*/
+	public void addPerson(Person person) {
+		peopleRepository.save(person);
+	}
+	
 	/*Update by Lastname*/
 	public void updateLastname(Person person) {
 		peopleRepository.save(person);
