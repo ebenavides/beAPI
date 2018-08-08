@@ -42,8 +42,8 @@ public class Controller {
 	
 	/*PUT - Lastname*/
 	@RequestMapping(method=RequestMethod.PUT, value="/people/{id}")
-	public void updateLastname() {
-		/* apiService.updateLastname();*/
+	public void updateLastname(@RequestBody @PathVariable("id") String id, String lastname) {
+		apiService.updateLastname(id,lastname);
 	}
 	
 	

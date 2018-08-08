@@ -44,8 +44,13 @@ public class APIService {
 	}
 	
 	/*Update by Lastname*/
-	public void updateLastname(Person person) {
-		peopleRepository.save(person);
+	public void updateLastname(String id, String lastname) {
+		Person person = this.getPerson(id);
+		if(person.getLastname()!="") {
+			person.setLastname(lastname);
+			peopleRepository.save(person);
+		}
+		
 	}
 	
 	/*Delete by SSN*/
