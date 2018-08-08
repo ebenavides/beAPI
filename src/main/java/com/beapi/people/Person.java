@@ -18,6 +18,7 @@ public class Person {
 	}
 	
 	public Person(int id, String name, String lastname, int ssn, String birthday) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.lastname = lastname;

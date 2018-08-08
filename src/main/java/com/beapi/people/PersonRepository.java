@@ -1,5 +1,7 @@
 package com.beapi.people;
 
-public class PersonRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface PersonRepository extends CrudRepository<Person, String> {
 
 }
